@@ -6,13 +6,20 @@ const props = defineProps({
   background: {
     default: '',
   },
+  backgroundSize: {
+    default: 'cover',
+  },
   dim: {
     default: true,
   }
 })
 
-const style = computed(() => handleBackground(props.background, props.dim))
-</script>
+const style = computed(() => {
+    let s = handleBackground(props.background, props.dim)
+    s.backgroundSize = props.backgroundSize;
+    return s;  
+  }
+)</script>
 
 <template>
   <div class="slidev-layout cover" :style="style">
