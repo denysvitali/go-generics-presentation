@@ -6,9 +6,12 @@ const props = defineProps({
   background: {
     default: '',
   },
+  dim: {
+    default: true,
+  }
 })
 
-const style = computed(() => handleBackground(props.background, true))
+const style = computed(() => handleBackground(props.background, props.dim))
 </script>
 
 <template>
