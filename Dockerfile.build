@@ -1,0 +1,12 @@
+FROM node:lts AS builder
+WORKDIR /app
+RUN mkdir -p /app && chown 1000:1000 /app
+USER 1000
+COPY --chown=1000 . /app
+RUN yarn install
+RUN yarn run slidev build
+
+FROM nginx:latest
+COPY --from=builder /app/dist/ /usr/share/nginx/html
+COPY --from=builder /app/pictures/ /usr/share/nginx/html/pictures/
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
