@@ -5,16 +5,12 @@ const props = defineProps({
   icon: {
     type: String,
   },
-  useFontAwesome: {
-    default: false,
-  }
 });
 </script>
 
 <template>
   <div class="icon-container">
-    <font-awesome-icon :icon="'fa-solid ' + props.icon" v-if="props.useFontAwesome" />
-    <sdx-icon :icon-name="props.icon" size="3" v-if="!props.useFontAwesome"/>
+    <sdx-icon :icon-name="props.icon" size="3"/>
     <div class="icon-text"><slot/></div>
   </div>
 </template>

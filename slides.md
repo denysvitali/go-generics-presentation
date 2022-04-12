@@ -619,8 +619,11 @@ slideTitle: Don't trust the IDE (2)
 </div>
 
 ---
-layout: default
+layout: cover
+background: https://media4.giphy.com/media/SXS950PdvjSfu9bCpV/giphy.gif?cid=ecf05e471g13n4a6cbb8qr0l50zmr2usi9czi22aexc27w30&rid=giphy.gif&ct=g
 ---
+
+# Q&A
 
 ---
 layout: default
@@ -645,9 +648,6 @@ layout: default
     <IconValue icon="icon-laptop-internet">
       <a href="https://denv.it">https://denv.it</a>
     </IconValue>
-    <IconValue icon="icon-telegram" useFontAwesome="true">
-      <a href="https://t.me/denvit">@denvit</a>
-    </IconValue>
   </div>
 </div>
 </div>
@@ -657,6 +657,7 @@ layout: default
     display: flex;
     margin-top: 2em;
     flex-direction: row;
+    justify-content: space-around;
     column-gap: 2rem;
   }
 
