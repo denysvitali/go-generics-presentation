@@ -34,9 +34,8 @@ jobs:
 
       - name: Archive production artifacts
         if: github.event_name != 'pull_request'
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: slidev-build
           path: ./dist
 
       - name: Deploy to GitHub Pages
